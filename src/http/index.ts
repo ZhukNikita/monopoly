@@ -3,7 +3,7 @@ import {AuthResponse} from "../models/AuthResponse";
 
 
 
-export const API_URL = `https://monopoly-server-git-main-zhuknikita.vercel.app/`;
+export const API_URL = `https://monopoly-server-two.vercel.app/`;
 
 const $api = axios.create({
     withCredentials:true,
