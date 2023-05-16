@@ -1,0 +1,140 @@
+@mixin flex($align,$justify){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.RegistrationModal{
+
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 560px;
+  background-color: white;
+  transition: all ease-in 0.4s;
+  animation: open 0.4s normal;
+  box-shadow: 0 0 14px -4px rgba(0,0,0,0.75);
+  border-radius: 8px;
+  padding: 20px;
+  @include flex(center,start);
+  flex-direction: column;
+  .closeModal{
+    width: 100%;
+    @include flex(center,end);
+    color: #637381;
+  }
+  .RegistrationLogo{
+    margin-top: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 28px;
+  }
+  form{
+    width: 100%;
+  }
+  .RegistrationEmail{
+    position: relative;
+    .emailLabel{
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+    .emailErrors{
+      margin: 5px 0 0 5px;
+      color: #b21242;
+      font-size: 13px;
+    }
+    input{
+      margin-top: 30px;
+      width: 90%;
+      height: 40px;
+      background-color: lightgrey;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      padding-left: 20px;
+      font-family: 'Comfortaa', cursive;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+  }
+  .RegistrationPass{
+    position: relative;
+    .emailLabel{
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+    input{
+      margin-top: 30px;
+      width: 90%;
+      height: 40px;
+      background-color: lightgrey;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      padding-left: 20px;
+      font-family: 'Comfortaa', cursive;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .passIcon{
+      position: absolute;
+      top:39px;
+      right: 20px;
+    }
+    .emailErrors{
+      margin: 5px 0 0 5px;
+      color: #b21242;
+      font-size: 13px;
+    }
+  }
+  .RegistrationLinks{
+    @include flex(center,center);
+    gap: 90px;
+    width: 94%;
+    font-size: 12px;
+    margin-top: 10px;
+    button{
+      border: none;
+      font-size: 12px;
+      color: #637381;
+      text-decoration: underline;
+      background: none;
+      font-family: 'Comfortaa', cursive;
+    }
+  }
+  .RegistrationButtonActive{
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    margin-top: 30px;
+    border: none;
+    color: #212B36;
+    font-weight: bold;
+    background-color: rgba(145, 158, 171, 0.16);
+    font-family: 'Comfortaa', cursive;
+
+  }
+  .RegistrationButton{
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    margin-top: 30px;
+    border: 1px solid grey;
+    background-color: white;
+    font-family: 'Comfortaa', cursive;
+  }
+}
+@keyframes open {
+  0%{
+    transform: scale(0,0);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
