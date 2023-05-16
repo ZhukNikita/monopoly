@@ -49,7 +49,7 @@ const Cabinet:FC<CabinetInterface> = ({setIsLoginModalOpen,isLoginModalOpen,setI
         if (selectedFile)setPreview(objectUrl)
         return () => URL.revokeObjectURL(objectUrl)
     }, [selectedFile])
-    if (!store.isAuth && !window.localStorage.getItem('token')){
+    if (!store.isAuth){
         return <Navigate to='/'/>
     }
     return(
